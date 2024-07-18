@@ -5,8 +5,12 @@
     <link rel="stylesheet" href="/stylesheets/style.css" />
   </head>
   <body>
+    <nav>
+      <a href="/items">Items</a>
+      <a href="/categories">Categories</a>
+    </nav>
     <h1><%= title %></h1>
     <p>Welcome to <%= title %></p>
-    <%- include(partial) %>
+    <%- include(`partials/${partial}`) %>
   </body>
 </html>

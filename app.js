@@ -6,7 +6,7 @@ import path from 'path';
 
 import connectDB from './connectDB.js';
 
-import { categoriesRouter, itemsRouter } from './routes/index.js';
+import { baseRouter, categoriesRouter, itemsRouter } from './routes/index.js';
 
 const app = express();
 
@@ -22,6 +22,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(path.resolve(), 'public')));
 
+app.use('/', baseRouter);
 app.use('/items', itemsRouter);
 app.use('/categories', categoriesRouter);
 

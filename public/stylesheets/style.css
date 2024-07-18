@@ -10,3 +10,25 @@ body {
 a {
   color: #00b7ff;
 }
+
+.flex {
+  display: flex;
+}
+
+.fl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.fl-justify-between {
+  justify-content: space-between;
+}
+
+.img-card {
+  width: 300px
+}
+
+.gap-30 {
+  display: flex;
+  gap: 30px;
+}

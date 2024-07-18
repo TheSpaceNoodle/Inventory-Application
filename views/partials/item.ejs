@@ -1,0 +1,25 @@
+<div>
+    <p>List of item categories:</p>
+    <% item.category.forEach((item) => { %>
+        <span><%= item.name %></span>
+    <% }) %>
+</div>
+
+<br>
+<br>
+
+<div class="img-card">
+    <img src="<%= item.img_url || 'https://placehold.co/300x150' %>" width="300" height="150" alt="<%= item.name %>">
+    <div class="fl fl-justify-between">
+        <p><%= item.name %></p>
+        <p><%= item.price %></p>
+    </div>
+    <p><%= item.description %></p>
+    <p>Modified: <%= item.last_modified %></p>
+    <p>In stock: <%= item.in_stock %></p>
+</div>
+
+<div>
+    <a href="<%= item.url + '/delete' %>">Delete item</a>
+    <a href="<%= item.url + '/update' %>">Update item</a>
+</div>

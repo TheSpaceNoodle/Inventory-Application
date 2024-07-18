@@ -1,0 +1,31 @@
+<div>
+    <% if (currentCategory) { %>
+        <p>Current category: <%= currentCategory.name %></p>
+        <p><%= currentCategory.description %></p>
+    <% } %>
+
+    <p>List of categories:</p>
+    <% categories.forEach((item) => { %>
+        <span><a href="?category=<%= item._id %>"><%= item.name %></a></span>
+    <% }) %>
+</div>
+
+<br>
+<br>
+
+<div class="fl gap-30">
+    <% items.forEach((item) => { %>
+        <div class="img-card">
+            <a href="<%= item.url %>">
+                <img src="<%= item.img_url || 'https://placehold.co/300x150' %>" width="300" height="150" alt="<%= item.name %>">
+                <div class="fl fl-justify-between">
+                    <p><%= item.name %></p>
+                    <p><%= item.price %></p>
+                </div>
+                <p><%= item.description %></p>
+                <!-- <p>Modified: <%= item.last_modified %></p> -->
+                <p>In stock: <%= item.in_stock %></p>
+            </a>
+        </div>
+    <% }); %>
+</div>
