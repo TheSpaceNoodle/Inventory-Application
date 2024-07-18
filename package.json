@@ -1,0 +1,28 @@
+{
+  "name": "inventory-application",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "cookie-parser": "~1.4.4",
+    "debug": "~2.6.9",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "http-errors": "~1.6.3",
+    "mongoose": "^8.5.1",
+    "morgan": "~1.9.1",
+    "nodemon": "^3.1.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.7.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "eslint": "^9.7.0",
+    "globals": "^15.8.0",
+    "prettier": "3.3.3",
+    "prettier-plugin-organize-imports": "^4.0.0"
+  }
+}
