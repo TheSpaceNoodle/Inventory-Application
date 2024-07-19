@@ -1,0 +1,27 @@
+<form method="<%= method %>">
+    <label for="name"> Name: </label>
+    <input type="text" name="name" value="<%= typeof item != "undefined" ? item.name : ''%>" required />
+    <br />
+    <label for="description"> Description: </label>
+    <input type="text" name="description" value="<%= typeof item != "undefined" ? item.description : ''%>" required />
+    <br />
+    <label for="price"> Price: </label>
+    <input type="number" name="price" value="<%= typeof item != "undefined" ? item.price : null%>" required />
+    <br />
+    <label for="in_stock"> In stock: </label>
+    <input type="number" name="in_stock" value="<%= typeof item != "undefined" ? item.in_stock : null%>" required />
+    <br />
+    <label for="img_url"> Image URL: </label>
+    <input type="text" name="img_url" value="<%= typeof item != "undefined" ? item.img_url : ''%>" required />
+    <label for="category"> Category: </label>
+    <br />
+    <select name="category" multiple required>
+        <% categories.forEach((category) => { %>
+            <option value="<%= category._id %>"><%= category.name %></option>
+        <% }) %>
+    </select>
+
+    <br />
+
+    <button type="submit">Submit</button>
+</form>
